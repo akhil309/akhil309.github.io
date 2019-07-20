@@ -262,7 +262,36 @@
 	      });     		
   		}
 
-	});
+	}); 
+	/*-------------------------------------------------------
+          self try for email sending
+   ----------------------------------------------------------*/
+       $(document).ready(function() {
+       $('#contactForm').submit(function(e) {
+       	var name = document.getElementById('contactName')
+       	var	email = document.getElementById('contactEmail')
+       	var	subject = document.getElementById('contactSubject')
+       	var	message = document.getElementById('contactMessage')
+
+       		if(!name.value || !email.value || !subject.value || !message.value){
+       			$('#message-warning').html("Something went wrong. Please try again.");
+		         $('#message-warning').fadeIn();
+       		}
+       		else{
+       			$.ajax({
+       				url: "https://formspree.io/akhilesh3091999@gmail.com",
+       				method: "POST",
+       				data: $(this).serialize(),
+       				dataType: "json" 
+       			});
+       			e.preventDefault()
+       			$(this).get(0).reset()
+       			$('#message-warning').html("Message sent");
+		         $('#message-warning').fadeIn();
+
+       		}
+       });
+     });
 
 
  	/*----------------------------------------------------- */
