@@ -45,8 +45,30 @@
 	/* Owl Carousel
 	------------------------------------------------------ */ 
 	$("#owl-slider").owlCarousel({
-        navigation: false,
-        pagination: true,
+		loop: true,
+		nav:true,
+		navText: [
+			      "prev<i class='fa fa-caret-left'></i>",
+			      "<i class='fa fa-caret-right'></i>"
+			    ],
+		autoPlay: true,
+		autoplayHoverPause: true,
+        itemsCustom : [
+	        [0, 1],
+	        [700, 2],
+	        [960, 3]
+	     ],
+        
+    });
+
+	$("#owl-slider2").owlCarousel({
+		items: 6,
+		loop: true,
+		navigation: false,
+		nav: true,
+		pagination: true,
+		autoPlay: true,
+		autoplayHoverPause: true,
         itemsCustom : [
 	        [0, 1],
 	        [700, 2],
@@ -98,21 +120,6 @@
 		offset: "90%"
 	
 	});	
-
-
-	/*---------------------------------------------------- */
-	/*	Masonry
-	------------------------------------------------------ */
-	var containerProjects = $('#folio-wrapper');
-
-	containerProjects.imagesLoaded( function() {
-
-		containerProjects.masonry( {		  
-		  	itemSelector: '.folio-item',
-		  	resize: true 
-		});
-
-	});
 
 
 	/*----------------------------------------------------*/

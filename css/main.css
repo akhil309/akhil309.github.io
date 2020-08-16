@@ -1790,16 +1790,19 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #portfolio {
-	background: #FFFFFF;
+	/* background: #FFFFFF; */
+	background-color: #F5FFFA;
 	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding-bottom: 8rem;
 }
 #portfolio .folio-item {
 	padding: 0;
+	height: 300px;
 	position: relative;
 	overflow: hidden;
 }
 #portfolio .folio-item img {
+	height: 300px;
 	vertical-align: middle;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
